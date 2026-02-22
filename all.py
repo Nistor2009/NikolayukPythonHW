@@ -1,8 +1,9 @@
-# типы данных: int, float, complex, str
+# import math, random
+# типы данных: int, float, complex, str '' "", list() [], set() {}, frozenset(), tuple() (), dict() {key:value}
 #           , _ - служебная переменная. хранит последнее вычисленное значение
 # операции: +, -, *, /, // - деление без остатка(-4.5 получится -5), % - остаток от деления
 #           , ** - возведение в степень. чтобы взять корень нужно использовать (1/3). Работает с права на лево.
-# math: abs(-5), min(51,32,1,0,-9), max(3,1,2), pow(3,2) - степень, round(7.1258, 2) - округление
+# math: abs(-5), min(51,32,1,0,-9), max(3,1,2), pow(3,2) - степень, round(7.1258, 2) - округление, sum(array)
 # str: len('str'), str(1), str_1[0], str_1[0:2], str_1[::-1] - выведет строку в обратном порядке
 #       , str_1.find('1'), str_1.rfind('1'), str_1.index('1'), str_1.rindex('1') - вернёт индекс с 0. index вернёт ошибку если не найдет
 #       , str_2 in str_1 - вернет true/false, str_1.replace(old, new, count), split(sep, count)
@@ -10,23 +11,36 @@
 #       , str_1.isdigit(), str_1.isalpha(), str_1.isalnum(), str_1.isupper(), str_1.islower(), str_1.upper(), str_1.lower(). str_1.capitalize()
 #       , ', '.join(str_1) - 'a, b, c, d', str_1.center(15), 'is cool' - поставит str_1 в центр из 15, str_1.count(str_2, start, end)
 #     !!!, ord('A') - номер символа ASCII
+# list: list_1.append(value), list_1 = list_1 + list_2, list_1[1] = 'A'
+#       , list_1.clear(), del list_1[:], list_1.pop(1) - показать/удалить, list_1.remote('dog')
+#       , list_1.index('dog'), list_1.count('i'), list_1.insert(1,'dog'), list_1.sort(reverse=True), list_1.reverse(), list_1.copy()
+#       , element not in list_1
+#       , sorted(list_1)
+#       , распаковка: first, *list_2, last = list_1
+#set: set_1.add(element), set_1.update([2,3,4]) - добавляет несколько, set_1.remove('dog') - ошибка если не найдено, set_1.discard('dog')
+#       , set_1.pop() - удаляет случайный
+#       , set_1 = set_2|set_3 set_1 = set_2.union(set_3) - объединение.
+#       , set_1 = set_2&set_3 set_1 = set_2.intersection(set_3) - пересечение(только одинаковые в двух)
+#       , set_1 = set_2-set_3 set_1 = set_2.difference(set_3) - разница из первого
+#       , set_1 = set_2^set_3 set_1 = set_2.symmetric_difference(set_3) - обратная от &
+#       , set_1 = set_3<=set_2 set_1 = set_2.issubset(set_3) - все элементы set_3 есть в set_2?
+# random: random.randrange(start, stop, step), random.randint(1,20), random.random() - от 0 до 1
 # console help() -> keywords
 # ввод с консоли: name = input() или name = input().split() - получим массив
+# основные операции: type(a), id(a), element in/not in array, len('array'), range(2, 10, 2)
 a = 7
 var_a = "hello"
 b = a
 a = b = c = 0
 a, b = 6.7, 2
-a, b = b, a #обмен значениями
-print(a)
-print(type(a))
-print(id(a))
-
+a, b = b, a  # обмен значениями
+a += 1
+if a > 8:
+    print(a)
+elif a < 3:
+    print(type(a))
+else:
+    print(id(a))
 
 ####################################
-a+=1
-print(a)
-import math
-print(math.ceil(a))
-
 
